@@ -9,7 +9,8 @@ const Genre = (props) => {
                 {props.books.map(book => <Book     
                     key={book.name}
                     bookColor={props.firstColor}
-                    name={book.name} 
+                    name={book.name}
+                    author={book.author}  
                     publisher={book.publisher}
                     image={book.image}
                 />)}

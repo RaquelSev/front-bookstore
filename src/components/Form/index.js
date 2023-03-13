@@ -7,6 +7,7 @@ import { useState } from 'react';
 const Form = (props) => {
 
     const [name, setName] = useState('');
+    const [author, setAuthor] = useState('');
     const [publisher, setPublisher] = useState('');
     const [image, setImage] = useState('');
     const [genre, setGenre] = useState('');
@@ -15,11 +16,13 @@ const Form = (props) => {
         event.preventDefault();
         props.addBook({
             name,
+            author,
             publisher,
             image,
             genre
         })
         setName('')
+        setAuthor('')
         setPublisher('')
         setImage('')
         setGenre('')
@@ -32,14 +35,21 @@ const Form = (props) => {
                 <TextField
                     mandatory={true} 
                     label="Name" 
-                    placeholder="Type your name"
+                    placeholder="Type the book's name"
                     typed={name}
                     changed={typed => setName(typed)}
                 />
                 <TextField 
                     mandatory={true} 
+                    label="Author" 
+                    placeholder="Type the author"
+                    typed={author}
+                    changed={typed => setAuthor(typed)}
+                />
+                <TextField 
+                    mandatory={true} 
                     label="Publisher" 
-                    placeholder="Type your publisher"
+                    placeholder="Type the publisher"
                     typed={publisher}
                     changed={typed => setPublisher(typed)}
                 />
