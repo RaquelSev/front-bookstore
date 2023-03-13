@@ -7,28 +7,28 @@ import { useState } from 'react';
 const Form = (props) => {
 
     const [name, setName] = useState('');
-    const [position, setPosition] = useState('');
+    const [publisher, setPublisher] = useState('');
     const [image, setImage] = useState('');
-    const [team, setTeam] = useState('');
+    const [genre, setGenre] = useState('');
 
     const saving = (event) => {
         event.preventDefault();
-        props.addWorker({
+        props.addBook({
             name,
-            position,
+            publisher,
             image,
-            team
+            genre
         })
         setName('')
-        setPosition('')
+        setPublisher('')
         setImage('')
-        setTeam('')
+        setGenre('')
     }
 
     return (
         <section className="form">
             <form onSubmit={saving}>
-                <h2>Fill the data to add the cards worker to add in the system</h2>
+                <h2>Fill the data to add your book to the system</h2>
                 <TextField
                     mandatory={true} 
                     label="Name" 
@@ -38,10 +38,10 @@ const Form = (props) => {
                 />
                 <TextField 
                     mandatory={true} 
-                    label="Position" 
-                    placeholder="Type your position"
-                    typed={position}
-                    changed={typed => setPosition(typed)}
+                    label="Publisher" 
+                    placeholder="Type your publisher"
+                    typed={publisher}
+                    changed={typed => setPublisher(typed)}
                 />
                 <TextField 
                     label="Image" 
@@ -51,10 +51,10 @@ const Form = (props) => {
                     />
                 <DropList  
                     mandatory={true} 
-                    label="Team"
-                    itens={props.teams} 
-                    typed={team}
-                    changed={typed => setTeam(typed)}   
+                    label="Genre"
+                    itens={props.genres} 
+                    typed={genre}
+                    changed={typed => setGenre(typed)}   
                 />
                 <Button>Create Card</Button>
             </form>

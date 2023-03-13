@@ -1,72 +1,72 @@
 import { useState } from "react";
 import Banner from "./components/Banner"
 import Form from "./components/Form";
-import Team from "./components/Team";
+import Genre from "./components/Genre";
 
 
 function App() {
 
-  const teams = [
+  const genres = [
     {
-      name: 'Programação',
+      name: 'Novel',
       firstColor: '#57C278',
       secondColor: '#D9F7E9'
     },
     {
-      name: 'Front-End',
+      name: 'Biography',
       firstColor: '#82CFFA',
       secondColor: '#E8F8FF'
     },
     {
-      name: 'Data Science',
+      name: 'Terror',
       firstColor: '#A6D157',
       secondColor: '#F0F8E2'
     },
     {
-      name: 'Devops',
+      name: 'Sci-fi',
       firstColor: '#E06B69',
       secondColor: '#FDE7E8'
     },
     {
-      name: 'UX e Design',
+      name: 'Mystery',
       firstColor: '#DB6EBF',
       secondColor: '#FAE9F5'
     },
     {
-      name: 'Mobile',
+      name: 'Historical fiction',
       firstColor: '#FFBA05',
       secondColor: '#FFF5D9'
     },
     {
-      name: 'Inovação e Gestão',
+      name: 'Romance',
       firstColor: '#FF8A29',
       corSecundaria: '#FFEEDF'
     }
 
   ]
 
-  const [workers, setWorkers] = useState([]);
+  const [books, setBooks] = useState([]);
   
-  const newWorker = (worker) => {
-    setWorkers([...workers, worker])
-    console.log(worker)
+  const newBook = (book) => {
+    setBooks([...books, book])
+    console.log(book)
   }
 
-  console.log(workers)
+  console.log(books)
 
   return (
     <div className="App">
       <Banner />
       <Form
-        teams={teams.map(team => team.name)} 
-        addWorker={worker => newWorker(worker)}
+        genres={genres.map(genre => genre.name)} 
+        addBook={book => newBook(book)}
       />
-      {teams.map(team => <Team 
-        key={team.name} 
-        name={team.name} 
-        firstColor={team.firstColor} 
-        secondColor={team.secondColor}
-        workers={workers.filter(worker => worker.team === team.name)}
+      {genres.map(genre => <Genre 
+        key={genre.name} 
+        name={genre.name} 
+        firstColor={genre.firstColor} 
+        secondColor={genre.secondColor}
+        books={books.filter(book => book.genre === genre.name)}
         />)}
     </div>
   );
