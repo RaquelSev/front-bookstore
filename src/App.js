@@ -9,39 +9,39 @@ function App() {
   const genres = [
     {
       name: 'Novel',
-      firstColor: '#57C278',
-      secondColor: '#D9F7E9'
+      firstColor: '#23255F',
+      secondColor: '#9093CE'
     },
     {
       name: 'Biography',
-      firstColor: '#82CFFA',
-      secondColor: '#E8F8FF'
+      firstColor: '#1C763B',
+      secondColor: '#66BB83'
     },
     {
       name: 'Terror',
-      firstColor: '#A6D157',
-      secondColor: '#F0F8E2'
+      firstColor: '#761C2C',
+      secondColor: '#AF6B77'
     },
     {
       name: 'Sci-fi',
-      firstColor: '#E06B69',
-      secondColor: '#FDE7E8'
+      firstColor: '#1C6B76',
+      secondColor: '#66BAC6'
     },
     {
       name: 'Mystery',
-      firstColor: '#DB6EBF',
-      secondColor: '#FAE9F5'
+      firstColor: '#827826',
+      secondColor: '#C6BD72'
     },
     {
       name: 'Historical fiction',
-      firstColor: '#FFBA05',
-      secondColor: '#FFF5D9'
+      firstColor: '#441C76',
+      secondColor: '#8A63BD'
     },
     {
       name: 'Romance',
-      firstColor: '#FF8A29',
-      corSecundaria: '#FFEEDF'
-    }
+      firstColor: '#803B86',
+      secondColor: '#B477B9'
+    },
 
   ]
 

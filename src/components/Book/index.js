@@ -1,6 +1,6 @@
 import './Book.css';
 
-const Book = ({ name, image, publisher, author, bookColor }) => {
+const Book = ({ name, image, author, bookColor }) => {
     return (
         <div className='book'>
             <div className='header' style={ {backgroundColor: bookColor} }>

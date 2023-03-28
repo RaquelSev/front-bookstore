@@ -31,7 +31,7 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={saving}>
-                <h2>Fill the data to add your book to the system</h2>
+                <h2>Bookstore System - Fill the data to add your book to the system</h2>
                 <TextField
                     mandatory={true} 
                     label="Name" 
